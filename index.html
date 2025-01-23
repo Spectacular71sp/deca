@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deca Datacenter</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root {
+--lime-green: #c4d600;
+--dark-blue: #0a0b2e;
+--footer-bg: #080917;
+}
+
+body {
+font-family: 'Space Grotesk', sans-serif;
+}
+
+.bg-dark-blue {
+background: linear-gradient(0deg, rgba(9, 0, 44, 0.90) 0%, rgba(9, 0, 44, 0.90) 100%), url('assets/img/ddl.jpg') lightgray 50% / cover no-repeat;
+}
+
+.btn-lime {
+background-color: var(--lime-green);
+border-color: var(--lime-green);
+color: #000;
+padding: 12px 24px;
+font-weight: 700;
+font-size: 1rem;
+border-radius: 0px;
+}
+
+.btn-lime:hover {
+background-color: #a8b800;
+border-color: #a8b800;
+color: #000;
+}
+
+.hero {
+background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0.06%, rgba(0, 0, 0, 0.99) 79.96%), url(assets/img/banner.jpg) lightgray 50% / cover no-repeat;
+background-size: cover;
+background-position: center;
+padding-top: 12rem;
+padding-bottom: 148px;
+}
+
+.stats {
+background-color: var(--lime-green);
+}
+
+.how-it-works {
+background-color: #f5f9ff;
+}
+
+.navbar-brand img {
+height: 72.141px;
+width: 100%;
+}
+
+.stat-number {
+font-size: 3.5rem;
+font-weight: 600;
+}
+
+.stat-label {
+font-size: 1.25rem;
+font-weight: 500;
+}
+
+.navbar .navbar-nav {
+margin: 0 auto;
+}
+
+.navbar .nav-link {
+color: white !important;
+padding: 0 20px;
+font-size: 1rem;
+font-weight: 500;
+}
+
+.footer-bg {
+background-color: var(--footer-bg);
+font-family: Inter !important;
+}
+
+.social-icons a {
+color: white;
+font-size: 20px;
+margin-right: 16px;
+}
+
+.social-icons a:hover {
+color: var(--lime-green);
+}
+
+.social-icons i{
+background: #292929;
+border-radius: 50px;
+padding: 8px;
+font-size: 16px;
+}
+
+.footer-links div{
+margin-bottom: 10px;
+}
+
+.footer-links a {
+color: #F5F7FA;
+text-decoration: none;
+line-height: 2;
+font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+color: var(--lime-green);
+}
+
+.footer-newsletter input {
+background-color: transparent;
+border: none;
+color: white;
+padding: 12px 16px;
+font-size: 0.875rem;
+}
+
+.footer-newsletter input::placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-btn {
+padding: 8px 20px;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+font-weight: 700;
+font-size: 0.875rem;
+border-radius: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-weight: 700;
+}
+
+.display-4 {
+font-size: 3.5rem;
+font-weight: 500!important;
+}
+
+.display-5 {
+font-size: 2.5rem;
+font-weight: 500!important;
+}
+
+.lead {
+font-size: 1.25rem;
+font-weight: 400;
+}
+
+.card-title {
+font-size: 1.25rem;
+font-weight: 600;
+}
+
+.card-text {
+font-size: 1rem;
+font-weight: 400;
+}
+
+.card {
+border-radius: 16px;
+}
+
+.footer-newsletter .input-group {
+background-color: rgba(255, 255, 255, 0.2);
+border-radius: 8px;
+overflow: hidden;
+}
+
+.footer-newsletter .btn {
+background-color: transparent;
+border: none;
+color: white;
+padding: 12px 16px;
+}
+
+.footer-newsletter .btn:hover {
+background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control:focus {
+color: var(--bs-body-bg);
+background-color: transparent;
+border-color: transparent;
+outline: 0;
+box-shadow: none;
+}
+
+h2.display-5 {
+font-weight: 600;
+}
+.bg-blue{
+background-color: #0F0450 !important;
+}
+.candles{
+width: 180px;
+transform: scale(-1, -1);
+position: absolute;
+left: 4.5rem;
+margin-top: 21rem;
+display: none;
+}
+.rope-img{
+width: 236px;
+transform: scaleX(-1) rotate(40deg);
+position: absolute;
+right: 33rem;
+margin-top: 26rem;
+display: none;
+}
+.section-img{
+float: none;
+}
+@media (min-width: 992px) {
+.display-4{
+font-size: 80px;
+}
+.display-5{
+font-size: 65px;
+}
+.lead{
+font-size: 18px;
+}
+.hero p{
+font-size: 25px;
+line-height: 35px;
+}
+.rope-img{
+display: inline;
+}
+.btn-lime{
+font-size: 19.25px;
+}
+.nav-btn{
+font-size: 13.592px;
+}
+.stat-number{
+font-size: 60.39px;
+}
+.stat-label{
+font-size: 16.723px;
+}
+.card-title {
+font-size: 20.964px;
+}
+
+.card-text {
+font-size: 15.094px;
+}
+.ddl-5{
+padding-top: 8rem !important;
+padding-bottom: 8rem !important;
+}
+.footer-links a{
+font-size: 14px;
+}
+.section-img{
+float: right;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+padding: 0 20px!important;
+font-size: 20px;
+font-weight: 500;
+}
+.footer-bg{
+padding-top: 64px !important;
+}
+.footer-bg .mb-4{
+margin-bottom: 0!important;
+}
+.htw-5 {
+padding-top: 3rem !important;
+padding-bottom: 8rem !important;
+}
+.candles{
+display: inline;
+}
+}
+.hiw-card{
+display: flex;
+gap: 20px;
+padding: 1rem 27px;
+}
+.hiw-card i{
+font-size: 41px!important;
+margin-top: 0.7rem;
+}
+.fa-arrow-right{
+transform: rotate(324deg);
+}
+
+/* Add these new styles */
+.navbar {
+position: fixed;
+width: 100%;
+z-index: 1000;
+transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+background-color: var(--footer-bg);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-brand img {
+    height: 65.141px;
+}
+
+@media (max-width: 991px) {
+.navbar.show {
+background-color: var(--footer-bg);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar-collapse {
+padding: 2rem 0;
+}
+.navbar-collapse .d-flex {
+margin: 1rem;
+margin-bottom: 0;
+}
+.navbar-collapse .navbar-nav {
+margin: 0 auto;
+gap: 20px;
+margin-bottom: 2rem;
+}
+}
+</style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="navbar-brand" href="#">
+<img src="assets/img/logo.png" alt="Deca Logo" width="50">
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="#">Main</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Benefits</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">FAQ</a>
+</li>
+</ul>
+<div class="d-flex">
+<button class="btn btn-outline-light nav-btn me-2" style="margin-right: 21.9px !important;">
+Log in
+<i class="fas fa-arrow-right"></i>
+</button>
+<button class="btn btn-lime nav-btn">
+Sign up
+<i class="fas fa-arrow-right"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center text-white">
+<div class="container">
+<div class="row">
+<div class="col-lg-8">
+<h1 class="display-4 fw-bold mb-4">EMPOWER YOUR FUTURE WITH DECA DATACENTER</h1>
+<p class="lead mb-4">Join the Deca family, complete your KYC, and unlock opportunities to earn monthly profits with your own server.</p>
+<button class="btn btn-lime btn-lg">
+Get Started
+<i class="fas fa-arrow-right ms-2"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Feature Section -->
+<section class="py-5">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 mb-4 mb-lg-0">
+<h2 class="display-5 fw-semibold fw-bold mb-4">Unlock Your Financial Future With Deca KYC</h2>
+<p class="lead mb-4">Deca Datacenter's KYC platform simplifies your journey toward obtaining server hosting credits that empower you to achieve a steady income from your server. Our user-friendly interface minimizes complexity, letting you focus on what truly matters—growing your profitable enterprise.</p>
+<button class="btn btn-lime btn-lg mt-3">
+Get Started
+<i class="fas fa-arrow-right ms-2"></i>
+</button>
+</div>
+<div class="col-lg-6 mb-4 mb-lg-0">
+<img src="assets/img/rope.png" class="rope-img">
+<img src="assets/img/server.png" alt="Server Illustration" class="img-fluid section-img" style="transform: scaleX(-1);">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats py-5">
+<div class="container">
+<div class="row text-center">
+<div class="col-md-4">
+<div class="stat-number">4000+</div>
+<div class="stat-label">Deca Partners</div>
+</div>
+<div class="col-md-4">
+<div class="stat-number">1050</div>
+<div class="stat-label">Applications</div>
+</div>
+<div class="col-md-4">
+<div class="stat-number">720</div>
+<div class="stat-label">Submissions</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works py-5 htw-5">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 mb-4 mb-lg-0">
+<img src="assets/img/server2.png" alt="How It Works Illustration" class="img-fluid">
+<img src="assets/img/candles.png" class="candles">
+</div>
+<div class="col-lg-6 mb-4 mb-lg-0">
+<h2 class="display-5 fw-semibold fw-bold mb-4">How It Works</h2>
+<div class="card bg-blue text-white mb-3">
+<div class="card-body hiw-card">
+<i class="fas fa-user-plus me-2"></i>
+<div>
+<h5 class="card-title">
+Register an Account
+</h5>
+<p class="card-text">Sign up with your details and set up your profile.</p>
+</div>
+</div>
+</div>
+<div class="card bg-blue text-white mb-3">
+<div class="card-body hiw-card">
+<i class="fas fa-check-circle me-2"></i>
+<div>
+<h5 class="card-title">
+Complete your KYC
+</h5>
+<p class="card-text">Submit documentation to ensure a secure and verified experience.</p>  
+</div>
+</div>
+</div>
+<div class="card bg-blue text-white mb-3">
+<div class="card-body hiw-card">
+<i class="fas fa-hand-holding-usd me-2"></i>
+<div>
+<h5 class="card-title">
+Apply for Grant
+</h5>
+<p class="card-text">Submit an application to receive funding for your server.</p>
+</div>
+</div>
+</div>
+<button class="btn btn-lime btn-lg mt-3">
+Get Started
+<i class="fas fa-arrow-right ms-2"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Program Section -->
+<section class="bg-dark-blue text-white py-5 ddl-5">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 mb-4 mb-lg-0">
+<h2 class="display-5 fw-semibold fw-bold mb-4">DDL 2025 KYC PROGRAM</h2>
+<p class="lead mb-4">The DDL 2025 KYC Program is officially launching on February 10. All interested DDL partners are required to complete this mandatory KYC verification process to participate in our initiatives.</p>
+<p class="lead mb-4">This program is essential for ensuring transparency and security. Once your verification is successfully completed, you will gain access to exclusive benefits while paving the way for consistent earning opportunities.</p>
+<p class="lead mb-4">Don't miss this important step—click the button below to begin your verification today!</p>
+<button class="btn btn-lime btn-lg mt-3">
+Get Started
+<i class="fas fa-arrow-right ms-2"></i>
+</button>
+</div>
+<div class="col-lg-6 mb-4 mb-lg-0">
+<img src="assets/img/server3.png" alt="Program Illustration" class="img-fluid section-img" style="width: 100%;max-width: 458px;">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-bg text-white py-5">
+<div class="container">
+<div class="row">
+<div class="col-lg-5 mb-4">
+<img src="assets/img/logo-footer.png" alt="Deca Logo" class="mb-4" style="width: 200px;margin-bottom: 40px !important;">
+<p class="small">Copyright © 2025 Deca Datacenter LTD.</p>
+<p class="small" style="margin-bottom: 40px;">All rights reserved.</p>
+<div class="social-icons mt-3">
+<a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="#" title="Dribble"><i class="fa-solid fa-basketball"></i></a>
+<a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+<a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+<div class="col-lg-2 mb-4">
+<h5 class="mb-3 fw-bold">Company</h5>
+<div class="footer-links">
+<div><a href="#">About us</a></div>
+<div><a href="#">Contact us</a></div>
+<div><a href="#">FAQ</a></div>
+<div><a href="#">Testimonials</a></div>
+</div>
+</div>
+<div class="col-lg-2 mb-4">
+<h5 class="mb-3 fw-bold">Support</h5>
+<div class="footer-links">
+<div><a href="#">Help center</a></div>
+<div><a href="#">Terms of service</a></div>
+<div><a href="#">Legal</a></div>
+<div><a href="#">Privacy policy</a></div>
+<div><a href="#">Status</a></div>
+</div>
+</div>
+<div class="col-lg-3 mb-4">
+<h5 class="mb-3 fw-bold">Stay up to date</h5>
+<div class="footer-newsletter">
+<form method="POST" action="">
+<div class="input-group">
+<input type="email" class="form-control" placeholder="Your email address" required>
+<button class="btn" type="submit">
+<i class="fa-regular fa-paper-plane"></i>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Add this script at the end of the body -->
+<script>
+window.addEventListener('scroll', function() {
+var navbar = document.querySelector('.navbar');
+if (window.scrollY > 50) {
+navbar.classList.add('scrolled');
+} else {
+navbar.classList.remove('scrolled');
+}
+});
+
+var navbarToggler = document.querySelector('.navbar-toggler');
+var navbar = document.querySelector('.navbar');
+
+navbarToggler.addEventListener('click', function() {
+navbar.classList.toggle('show');
+});
+
+window.addEventListener('resize', function() {
+if (window.innerWidth > 991) {
+navbar.classList.remove('show');
+}
+});
+</script>
+</body>
+</html>
