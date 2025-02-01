@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile - DECA</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<style>
+.split-screen {
+height: 100vh;
+}
+
+.hero-image {
+background-image: url('assets/img/login-banner.png');
+background-size: cover;
+background-position: center;
+height: 100%;
+}
+
+.logo {
+color: #4B56EF;
+font-family: 'Outfit';
+font-size: 40.684px;
+font-weight: 900;
+text-decoration: none;
+}
+
+.form-title {
+color: #3F3D56;
+font-family: "Space Grotesk";
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 8px;
+}
+
+.form-subtitle {
+font-size: 14px;
+color: #000;
+font-family: "Space Grotesk";
+font-weight: 400;
+margin-bottom: 32px;
+line-height: normal;
+}
+
+.form-subtitle a {
+color: #6C63FF;
+font-family: "Space Grotesk";
+font-weight: 700;
+line-height: normal;
+text-decoration: none;
+}
+
+.form-control {
+background-color: #F4F4F5;
+border: none;
+border-radius: 4px;
+padding: 12px 16px;
+font-size: 14px;
+color: #94A3B8;
+font-family: 'Poppins';
+font-weight: 400;
+line-height: normal;
+}
+
+.form-control::placeholder {
+color: #C8C8D0;
+font-family: 'Poppins';
+font-weight: 400;
+line-height: normal;
+}
+
+.form-control:focus {
+box-shadow: none;
+border: 1px solid #4B56EF;
+background-color: #F4F4F5;
+}
+
+.form-label {
+font-family: 'Poppins';
+font-size: 14px;
+font-weight: 500;
+color: #27272A;
+margin-bottom: 8px;
+}
+
+.selfie-container {
+height: 200px;
+background-color: #F4F4F5;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+.date-inputs {
+display: flex;
+gap: 8px;
+}
+
+.date-inputs input {
+width: 80px;
+text-align: center;
+}
+
+select.form-control {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+background-repeat: no-repeat;
+background-position: right 12px center;
+background-size: 16px;
+padding-right: 40px;
+}
+
+.save-btn {
+background: #4B56EF;
+color: white;
+font-family: 'Space Grotesk';
+font-size: 14px;
+font-weight: 700;
+padding: 14.438px 21.581px 13.562px 22.544px;
+border: none;
+box-shadow: 0px 3.654px 22.839px 0px rgba(182, 209, 61, 0.25);
+margin-top: 24px;
+transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+background: #3642DB;
+color: white;
+}
+
+.fa-arrow-right {
+transform: rotate(324deg);
+margin-left: 7.27px;
+}
+
+.upload-label {
+        cursor: pointer;
+        position: absolute;
+    z-index: 1000;
+    }
+    .selfie-preview {
+        position: relative;
+        display: inline-block;
+    }
+    .selfie-preview img {
+        padding: 1rem;
+        max-width: 100%;
+        height: auto;
+    }
+    .delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 4px;
+    padding-top: 1px;
+    cursor: pointer;
+    line-height: 12px;
+}
+
+@media (min-width: 513px) {
+.profile-head{
+display: flex;
+gap: 3rem;
+}
+}
+</style>
+</head>
+<body>
+<div class="container-fluid p-0">
+<div class="row g-0 split-screen">
+<!-- Left side - Hero Image -->
+<div class="col-lg-6 d-none d-lg-block">
+<div class="hero-image"></div>
+</div>
+<div class="col-lg-6 d-flex align-items-center justify-content-center">
+<div class="p-4 w-100" style="max-width: 575px;padding-top: 2.25rem !important;">
+
+<div class="profile-head">
+<h1 class="form-title">Input your Information</h1>
+<p class="form-subtitle">We need you to help us with some basic information for your account creation. Here are our <a href="#">terms and conditions</a>. Please read them carefully</p>
+</div>
+
+<form class="row g-4">
+<div class="col-md-8">
+<div class="row g-3">
+<div class="col-md-12">
+<label class="form-label">First name</label>
+<input type="text" class="form-control" placeholder="John Doe">
+</div>
+<div class="col-md-12">
+<label class="form-label">Last name</label>
+<input type="text" class="form-control" placeholder="John Doe">
+</div>
+<div class="col-12">
+<label class="form-label">Phone Number</label>
+<input type="tel" class="form-control" placeholder="+234 812345789">
+</div>
+
+</div>
+</div>
+<div class="col-md-4">
+<label class="form-label">Take a selfie</label>
+<label for="selfie-upload" class="selfie-container">
+    <input type="file" id="selfie-upload" accept="image/*" style="display: none;" />
+ <svg class="upload-label" xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 63 57" fill="none">
+<path d="M56.7 6.33333H46.7145L40.95 0H22.05L16.2855 6.33333H6.3C4.62914 6.33333 3.02671 7.00059 1.84523 8.18832C0.663748 9.37605 0 10.987 0 12.6667V50.6667C0 52.3464 0.663748 53.9573 1.84523 55.145C3.02671 56.3327 4.62914 57 6.3 57H56.7C58.3709 57 59.9733 56.3327 61.1548 55.145C62.3363 53.9573 63 52.3464 63 50.6667V12.6667C63 10.987 62.3363 9.37605 61.1548 8.18832C59.9733 7.00059 58.3709 6.33333 56.7 6.33333ZM56.7 50.6667H6.3V12.6667H19.0575L24.822 6.33333H38.178L43.9425 12.6667H56.7V50.6667ZM31.5 15.8333C27.3228 15.8333 23.3168 17.5015 20.3631 20.4708C17.4094 23.4401 15.75 27.4674 15.75 31.6667C15.75 35.8659 17.4094 39.8932 20.3631 42.8625C23.3168 45.8319 27.3228 47.5 31.5 47.5C35.6772 47.5 39.6832 45.8319 42.6369 42.8625C45.5906 39.8932 47.25 35.8659 47.25 31.6667C47.25 27.4674 45.5906 23.4401 42.6369 20.4708C39.6832 17.5015 35.6772 15.8333 31.5 15.8333ZM31.5 41.1667C28.9937 41.1667 26.5901 40.1658 24.8178 38.3842C23.0456 36.6026 22.05 34.1862 22.05 31.6667C22.05 29.1471 23.0456 26.7307 24.8178 24.9492C26.5901 23.1676 28.9937 22.1667 31.5 22.1667C34.0063 22.1667 36.4099 23.1676 38.1822 24.9492C39.9544 26.7307 40.95 29.1471 40.95 31.6667C40.95 34.1862 39.9544 36.6026 38.1822 38.3842C36.4099 40.1658 34.0063 41.1667 31.5 41.1667Z" fill="#979797" fill-opacity="0.29"/>
+</svg>
+    <div id="selfie-preview" class="selfie-preview">
+        <img id="selfie-image" src="" alt="Image Preview" style="display: none;" />
+        <span id="delete-icon" class="delete-icon" style="display: none;">&times;</span>
+    </div>
+</label>
+</div>
+<div class="col-md-8">
+<label class="form-label">Date of Birth</label>
+<div class="date-inputs">
+<input type="text" class="form-control" placeholder="dd" maxlength="2">
+<input type="text" class="form-control" placeholder="mm" maxlength="2">
+<input type="text" class="form-control" placeholder="yyyy" maxlength="4">
+</div>
+</div>
+<div class="col-md-4">
+<label class="form-label">NIN</label>
+<input type="text" class="form-control" placeholder="John Doe">
+</div>
+<div class="col-12">
+<label class="form-label">Address</label>
+<input type="text" class="form-control" placeholder="John Doe">
+</div>
+<div class="col-md-3">
+<label class="form-label">State</label>
+<select class="form-control">
+<option>State</option>
+</select>
+</div>
+<div class="col-md-3">
+<label class="form-label">Town</label>
+<select class="form-control">
+<option>Town</option>
+</select>
+</div>
+<div class="col-md-6">
+<label class="form-label">Local Government Area</label>
+<select class="form-control">
+<option>LGA</option>
+</select>
+</div>
+<div class="col-12 mt-4">
+<button type="submit" class="save-btn">Save <i class="fas fa-arrow-right"></i></button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('selfie-upload').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('selfie-image').src = e.target.result;
+                document.getElementById('selfie-image').style.display = 'block';
+                document.getElementById('delete-icon').style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    document.getElementById('delete-icon').addEventListener('click', function() {
+        event.preventDefault();
+        document.getElementById('selfie-image').src = '';
+        document.getElementById('selfie-image').style.display = 'none';
+        document.getElementById('delete-icon').style.display = 'none';
+        document.getElementById('selfie-upload').value = '';
+    });
+</script>
+</body>
+</html>
